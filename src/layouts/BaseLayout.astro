@@ -1,0 +1,30 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Sidebar from "../components/Sidebar.astro";
+const { title = "KAMITSUBAKI CARD GAME（神椿TCG） 非公式 Wiki" } = Astro.props;
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-white text-gray-900">
+    <Header />
+    <div class="mx-auto flex w-full max-w-[1280px] gap-4 px-3 py-4">
+      <aside class="hidden w-[220px] shrink-0 lg:block">
+        <Sidebar />
+      </aside>
+      <main class="min-w-0 flex-1">
+        <div class="rounded border border-gray-200 bg-white p-4">
+          <slot />
+        </div>
+      </main>
+      <aside class="hidden w-[260px] shrink-0 xl:block">
+        <!-- 右カラム（必要ならウィジェットなど） -->
+      </aside>
+    </div>
+  </body>
+</html>
