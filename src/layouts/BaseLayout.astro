@@ -1,7 +1,8 @@
 ---
-import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Sidebar from "../components/Sidebar.astro";
+import "../styles/global.css";
+
 const { title = "KAMITSUBAKI CARD GAME（神椿TCG） 非公式 Wiki" } = Astro.props;
 ---
 
@@ -13,7 +14,7 @@ const { title = "KAMITSUBAKI CARD GAME（神椿TCG） 非公式 Wiki" } = Astro.
   </head>
   <body class="min-h-screen bg-white text-gray-900">
     <Header />
-    <div class="mx-auto flex w-full max-w-[1280px] gap-4 px-3 py-4">
+    <div class="mx-auto flex w-full max-w-7xl gap-4 px-3 py-4">
       <aside class="hidden w-[220px] shrink-0 lg:block">
         <Sidebar />
       </aside>
