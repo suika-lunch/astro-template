@@ -12,14 +12,14 @@ const { title = "KAMITSUBAKI CARD GAME（神椿TCG） 非公式 Wiki" } = Astro.
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
   </head>
-  <body class="min-h-screen bg-white text-gray-900">
+  <body class="min-h-screen bg-base-100 text-base-content">
     <Header />
     <div class="mx-auto flex w-full max-w-7xl gap-4 px-3 py-4">
       <aside class="hidden w-[220px] shrink-0 lg:block">
         <Sidebar />
       </aside>
       <main class="min-w-0 flex-1">
-        <div class="rounded border border-gray-200 bg-white p-4">
+        <div class="rounded border border-base-300 bg-base-100 p-4">
           <slot />
         </div>
       </main>
